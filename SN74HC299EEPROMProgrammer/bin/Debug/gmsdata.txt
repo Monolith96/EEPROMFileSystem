@@ -1,0 +1,8 @@
+his is a configurable XModem Transfer library for arduino. By default it will
+use the official values for the XModem protocol so will be able to communicate
+with other XModem devices/software.
+
+The XModem protocol provides a way to reliably transmit raw binary data over a
+half-duplex serial connnection, however in most cases it requires at least
+enough memory to hold a full data packet in order to work properly
+co
