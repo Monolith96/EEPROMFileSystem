@@ -128,18 +128,11 @@ namespace SN74HC299EEPROMProgrammer
                 {
                     Console.WriteLine($"{p[0]} is unknown command");
                 }
-                //eFS.AddFile(new byte[7008], "lastfile.cfg");
 
                 printInfo(eFS);
             }
-
-
-
-
             Console.WriteLine("end");
-            //serialMedium.serialPort.Close();
             Console.ReadLine();
         }
-        // EEPROMFS MakeHeader()
     }
 }
