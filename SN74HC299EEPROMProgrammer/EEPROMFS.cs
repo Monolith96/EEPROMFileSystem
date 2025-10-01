@@ -198,9 +198,6 @@ namespace SN74HC299EEPROMProgrammer
             if (fileName == null || fileDataLength == 0) throw new Exception("fileName or fileSize cannot be empty");
             if (fileTable.GetUsedFileEntries() >= fileTable.GetMaxFiles()) throw new Exception("memory full");
 
-            // check if file fits
-            if (files.Count + 1 == fileTable.GetMaxFiles()) throw new Exception("Memory full.");
-
             //create new file entry
             UInt32 lastAvailableAddress;
 
