@@ -30,7 +30,8 @@ It includes utilities for **serializing, deserializing, defragmentation, and man
 To use this program, you need ![EEPROMProgrammer_JSON](https://github.com/Monolith96/SN74HC299/tree/main/examples/EEPROMProgrammer_JSON) sketch of the *SN74HC299* library running on an Arduino.
 
 ---
-Here's the way files are stored on the chip:</br>
+to manipulate files on memomry through this program, you don't need to get to low-level system. just call their respective methods.</br>
+here's the way files are stored on the chip (on low level):</br>
 *Header Tables* are stored at the beggining of the chip holding memory details and file counts</br>
 Like this:</br>
 ### FileTable
