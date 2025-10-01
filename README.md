@@ -1,8 +1,10 @@
-#  EEPROM Programmer with basic File-System
+#  Basic File-System for EEPROMs
 based on ![SN74HC299](https://github.com/Monolith96/SN74HC299) Arduino library
 
 A lightweight C# library and toolset for working with EEPROMs through a file system-like abstraction.
-It includes utilities for **serializing, deserializing, defragmentation, and managing EEPROM file tables**
+It includes utilities for **serializing, deserializing, defragmentation, and managing EEPROM file tables**</br>
+using the simple rules of *Header Tables*, individual files can be retrieved by any MCU.
+
 
 ---
 ## Screenshots
