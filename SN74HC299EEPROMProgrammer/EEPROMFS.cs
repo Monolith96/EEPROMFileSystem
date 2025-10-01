@@ -13,12 +13,9 @@ namespace SN74HC299EEPROMProgrammer
         [StructLayout(LayoutKind.Sequential, Pack = 1, Size = 23)]
         unsafe public struct FileTableStruct
         {                                       // addresses    desc. 
-            public fixed byte FixedBytes[2];    // 0 1          0xAA 0x55
-            public fixed byte MemorySize[3];    // 2 3 4        value is in kiloBytes (eg. 1, 2, 8, 16, 32, 64, 128, 256)
-            public fixed byte MemoryName[16];   // 5  6  7  8
-                                                // 9  10 11 12
-                                                // 13 14 15 16
-                                                // 17 18 19 20  16 bytes max
+            public fixed byte FixedBytes[2];    // 0-1          0xAA 0x55
+            public fixed byte MemorySize[3];    // 2-3-4        value is in bytes
+            public fixed byte MemoryName[16];   // 5 to 20         16 bytes max
             public byte MaxEntries;             // 21           max entries < 16
             public byte UsedEntries;            // 22           used entries < 16
         }
@@ -26,7 +23,7 @@ namespace SN74HC299EEPROMProgrammer
         [StructLayout(LayoutKind.Sequential, Pack = 1, Size = 26)]
         unsafe public struct FileDataStruct
         {
-            public fixed byte FileName[16];     //  0->15
+            public fixed byte FileName[16];     //  0 to 15
             public fixed byte StartAddress[3];  //  16-17-18
             public fixed byte EndAddress[3];    //  19-20-21
             public fixed byte Length[3];        //  22-23-24
